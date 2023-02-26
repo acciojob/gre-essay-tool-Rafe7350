@@ -1,9 +1,12 @@
- const textArea = document.getElementById('evaluatedText');
- const wordCount = document.getElementById('wordCount');
 
- textArea.addEventListener('input', () => {
-  const text = textArea.value;
-  const count = text.trim().split(/\s+/).length;
-     wordCount.textContent = count;
- });
-   
+ function countWord() {
+    var words = document.getElementById("evaluatedText").value;
+          var count = 0;
+          var split = words.split(' ');
+          for (var i = 0; i < split.length; i++) {
+              if (split[i] != "") {
+                  count += 1;
+              }
+          }
+document.getElementById("wordCount").innerHTML = count;
+      }
